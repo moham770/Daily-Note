@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Slab', serif;
+}
+label{
+  font-size: 18px;
+
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-text-fill-color: #fff !important;
+    caret-color: #fff !important;
+    -webkit-box-shadow: 0 0 0 30px #0e1c26 inset !important;
+}
+@layer components{
+  .inputHandel{
+    @apply outline-none rounded-[5px] ps-2 h-8 bg-mainColor  focus:border-fourdColor hover:border-fourdColor border-2 text-white   border-gray-500 transition-all duration-200  
+  }
+
+  .container{
+    @apply mx-auto
+  }
+  .handelButonForm{
+    @apply bg-titleAuth w-[120px] rounded-[5px] active:scale-[0.9] hover:bg-thirdColor transition-all duration-200 h-8 
+  }
+  .transition{
+    @apply transition-all duration-200
+  }
+
+  .logout:hover i{
+    @apply animate-movingRight
+
+  }
+
+  .overflowWrap{
+    word-wrap: break-word !important;
+  }
+}
+
+div:where(.swal2-container).swal2-center>.swal2-popup {
+  background-color: #001524;
+  color: #fff;
+}
